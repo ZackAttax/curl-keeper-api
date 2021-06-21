@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  password: MyString
+  curl_pattern: MyString
+  curl_type: MyString
+  porosity: MyString
+  density: MyString
+  width: MyString
+
+two:
+  username: MyString
+  password: MyString
+  curl_pattern: MyString
+  curl_type: MyString
+  porosity: MyString
+  density: MyString
+  width: MyString
