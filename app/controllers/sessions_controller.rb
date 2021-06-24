@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
         @user = User.find_by(username: params[:user][:username])
         if @user && @user.authenticate(params[:user][:password])
         render json: @user, except: [:password_digest, :created_at, :updated_at],
-            status: :created, location: @user
+        include: [:days], status: :created, location: @user
         else
            render json: @user.errors, status: :unprocessable_entity
         end

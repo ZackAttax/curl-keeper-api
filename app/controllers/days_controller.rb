@@ -15,10 +15,10 @@ class DaysController < ApplicationController
 
   # POST /days
   def create
+    days = Day.all
     @day = Day.new(day_params)
-
     if @day.save
-      render json: @day, status: :created, location: @day
+      render json: days, status: :created, location: @day
     else
       render json: @day.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class DaysController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def day_params
-      params.require(:day).permit(:products, :process, :user_id)
+      params.require(:day).permit(:products, :process, :user_id, :rating, :wea)
     end
 end

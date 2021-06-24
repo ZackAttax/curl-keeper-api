@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       render json: @user, except: [:password_digest, :created_at, :updated_at],
-       status: :created, location: @user
+      include: [:days], status: :created, location: @user
     else
       render json: @user.errors, status: :unprocessable_entity
     end
