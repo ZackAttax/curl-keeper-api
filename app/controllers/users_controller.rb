@@ -4,9 +4,8 @@ class UsersController < ApplicationController
   # GET /users
   def index
     @users = User.all
-
     render json: @users, except: [:username, :password_digest, :created_at, :updated_at],
-     include: :days, except: [:user_id, :created_at, :updated_at]
+     include: [:days] #, except: [:user_id, :created_at, :updated_at]
   end
 
   # GET /users/1
