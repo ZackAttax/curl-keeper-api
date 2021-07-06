@@ -10,7 +10,8 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
-    render json: @user
+    render json: @user, except: [:password_digest, :created_at, :updated_at],
+    include: [:days], status: :created, location: @user
   end
 
   # POST /users

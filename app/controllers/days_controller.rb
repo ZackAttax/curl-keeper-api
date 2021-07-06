@@ -17,15 +17,16 @@ class DaysController < ApplicationController
   def create
     days = Day.all
     @day = Day.new(day_params)
+    user = User.find_by_id(params[:day][:user_id])
     if @day.save
-      render json: days, status: :created, location: @day
+      render json: days, status: :created, location: @day, user: user
     else
       render json: @day.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /days/1
-  def update
+  def updateexi
     if @day.update(day_params)
       render json: @day
     else
