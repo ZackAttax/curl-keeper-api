@@ -1,7 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+
+# Curl Keeper 
+
+This is an app to keep track of and rate the success and failures for people using the Curly Girl Method.
+It also allows you to see peoples most successful days and sort days by different hair types that are the same as yours.
 
 Things you may want to cover:
 
