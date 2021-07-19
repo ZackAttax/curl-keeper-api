@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_24_121958) do
+ActiveRecord::Schema.define(version: 2021_07_08_204310) do
 
   create_table "days", force: :cascade do |t|
     t.text "products"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2021_06_24_121958) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "rating"
     t.string "weather"
+    t.string "likeProduct", default: "unliked"
     t.index ["user_id"], name: "index_days_on_user_id"
   end
 

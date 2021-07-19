@@ -26,7 +26,7 @@ class DaysController < ApplicationController
   end
 
   # PATCH/PUT /days/1
-  def updateexi
+  def update
     if @day.update(day_params)
       render json: @day
     else
