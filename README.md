@@ -11,3 +11,4 @@ It also allows you to see peoples most successful days and sort days by differen
 
 * then [rails s] to start the server
 
+* You will also need to run the front end located at https://github.com/ZackAttax/curl-keeper-front-end
